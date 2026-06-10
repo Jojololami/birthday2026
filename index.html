@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jojo's Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<canvas id="confetti-canvas"></canvas>
+ 
+<section class="hero">
+  <div class="petals" id="petals"></div>
+ 
+  <p class="hero-date">June 16th ✦ A Special Day</p>
+ 
+  <img class="hero-portrait" src="./images/headshot.png" alt="Jojo" onerror="this.style.display='none'"/>
+ 
+  <p class="hero-sub">it's</p>
+  <h1 class="hero-title">Jojo's <span>Birthday!🥳</span></h1>
+ 
+  <div class="hero-divider"></div>
+ 
+  <div class="countdown" id="countdown">
+    <div class="countdown-unit"><span class="countdown-num" id="cd-days">00</span><span class="countdown-label">Days</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-hrs">00</span><span class="countdown-label">Hours</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-min">00</span><span class="countdown-label">Minutes</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-sec">00</span><span class="countdown-label">Seconds</span></div>
+  </div>
+</section>
+ 
+<main class="main">
+ 
+  <!-- Intro / Photo section -->
+  <div class="intro-section">
+ 
+   <div class="intro-photo-wrap">
+  <div class="intro-photo-frame">
+    <img
+      id="introPhoto"
+      src="./images/jojolola.JPG"
+      alt="Jojo"
+      style="display:block;"
+    />
+  </div>
+</div>
+    </div>
+ 
+    <div class="intro-text">
+      <p class="intro-label">Hello, it's me ✨</p>
+      <h2 class="intro-name">Oyinkansola<br>Odunsi</h2>
+
+        <div class="intro-tags">
+        <span class="intro-tag">✝️ Believer</span>
+        <span class="intro-tag">👨‍💻 Frontend Developer</span>
+        <span class="intro-tag"> 📖Content Writer</span>
+        <span class="intro-tag">💌 Youtuber @ Jojo's Corner</span>
+      </div>
+      <p class="intro-bio">
+        From my childhood, my birthday has always held a special place in my heart, and it still does. At the very least, it reminds me of the blessing of life. And I'm grateful to God for the life, love, beauty, and the meaningful connections that surround me. <br>
+        
+        Looking back through the years, I feel so blessed for the growth I have experienced and I know it will only get better.
+
+        If you're here, you've been a part of my story in one way or the other. Thank you for celebrating this moment with me!
+      </p>
+    </div>
+ 
+  <h2 class="section-heading">A Trip Down Memory Lane 😍</h2>
+  <p class="gallery-intro">A few of my favourite moments 💙</p>
+ 
+<div class="gallery-grid" id="galleryGrid">
+ 
+    <div class="gallery-item" onclick="openLightbox(0)">
+      <img src="./images/gallery_pictures/photo1.png" alt="Memory 1" data-caption="A memory I treasure 🤍"/>
+      <span class="gallery-num">1</span>
+      <div class="gallery-caption">Little Oyin <br/>A memory I treasure 🤍</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(1)">
+      <img src="./images/gallery_pictures/photo2_ma famille.jpeg" alt="Memory 2" data-caption="Ma Famille❤️"/>
+      <span class="gallery-num">2</span>
+      <div class="gallery-caption">Ma Famille❤️</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(2)">
+      <img src="./images/gallery_pictures/photo3_grad.jpeg" alt="Memory 3" data-caption="Valedictory Service "/>
+      <span class="gallery-num">3</span>
+      <div class="gallery-caption"> Valedictory Service <br/> My Grandma and I</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(3)">
+      <img src="./images/gallery_pictures/photo4_2016.jpg" alt="Memory 4" data-caption="Part 1 Days, Good times"/>
+      <span class="gallery-num">4</span>
+      <div class="gallery-caption">Part 1 Days <br/> Good times ✨</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(4)">
+      <img src="./images/gallery_pictures/photo5_2016.jpg" alt="Memory 5" data-caption="On village outreach follow-up"/>
+      <span class="gallery-num">5</span>
+      <div class="gallery-caption">On village outreach follow-up</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(5)">
+      <img src="./images/gallery_pictures/photo6_2017.jpg" alt="Memory 6" data-caption="In 2017"/>
+      <span class="gallery-num">6</span>
+      <div class="gallery-caption">In 2017</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(6)">
+      <img src="./images/gallery_pictures/photo7_bday 2019.jpg" alt="Memory 7" data-caption="Birthday in 2019"/>
+      <span class="gallery-num">7</span>
+      <div class="gallery-caption">Birthday in 2019</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(7)">
+      <img src="./images/gallery_pictures/photo8_2018.jpeg" alt="Memory 8" data-caption="Birthday 2018"/>
+      <span class="gallery-num">8</span>
+      <div class="gallery-caption">Birthday 2018</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(8)">
+      <img src="./images/gallery_pictures/photo9_bday 2020.jpg" alt="Memory 9" data-caption="Birthday During COVID"/>
+      <span class="gallery-num">9</span>
+      <div class="gallery-caption">Birthday During COVID</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(9)">
+      <img src="./images/gallery_pictures/photo10_service 2021.jpeg" alt="Memory 10" data-caption="Serving My Fatherland 🌸"/>
+      <span class="gallery-num">10</span>
+      <div class="gallery-caption">Serving My Fatherland 🌸</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(10)">
+      <img src="./images/gallery_pictures/photo11_bday 2021.jpg" alt="Memory 11" data-caption="Birthday 2021"/>
+      <span class="gallery-num">11</span>
+      <div class="gallery-caption">Birthday 2021</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(11)">
+      <img src="./images/gallery_pictures/photo12.jpeg" alt="Memory 12" data-caption="A Random Golden moment ☀️"/>
+      <span class="gallery-num">12</span>
+      <div class="gallery-caption">A Random Golden moment ☀️</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(12)">
+      <img src="./images/gallery_pictures/photo13_Convocation 2021.jpg" alt="Memory 13" data-caption="My Convocation!"/>
+      <span class="gallery-num">13</span>
+      <div class="gallery-caption">My Convocation!</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(13)">
+      <img src="./images/gallery_pictures/photo14_IMG_2021.jpg" alt="Memory 14" data-caption="Pure Joy😍"/>
+      <span class="gallery-num">14</span>
+      <div class="gallery-caption">Pure Joy😍</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(14)">
+      <img src="./images/gallery_pictures/photo15_IMG_2022.jpg" alt="Memory 15" data-caption="Always Full of life"/>
+      <span class="gallery-num">15</span>
+      <div class="gallery-caption">Always Full of life</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(15)">
+      <img src="./images/gallery_pictures/photo16_IMG-2025.jpg" alt="Memory 16" data-caption="My Modelling Era 🎀"/>
+      <span class="gallery-num">16</span>
+      <div class="gallery-caption">My Modelling Era 🎀</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(16)">
+      <img src="./images/gallery_pictures/photo17_bday 2023_1.jpg" alt="Memory 17" data-caption="Birthday 2023"/>
+      <span class="gallery-num">17</span>
+      <div class="gallery-caption">Birthday 2023</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(17)">
+      <img src="./images/gallery_pictures/photo18_20240121_114728.jpg" alt="Memory 18" data-caption="Happy Child!🤭"/>
+      <span class="gallery-num">18</span>
+      <div class="gallery-caption">Happy Child!🤭</div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(18)">
+      <img src="./images/gallery_pictures/photo19_asoebi 2025.jpg" alt="Memory 19" data-caption="Aso-ebi Duties 👑 "/>
+      <span class="gallery-num">19</span>
+      <div class="gallery-caption">Aso-ebi Duties 👑 </div>
+    </div>
+ 
+    <div class="gallery-item" onclick="openLightbox(19)">
+      <img src="./images/gallery_pictures/photo20.JPG" alt="Memory 20" data-caption="Party Popping 😍"/>
+      <span class="gallery-num">20</span>
+      <div class="gallery-caption">Party Popping 😍</div>
+    </div>
+ 
+  </div>
+ 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="some.jpg" alt=""/>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+    <div class="lightbox-nav">
+      <button class="lightbox-btn" onclick="lightboxNav(-1)">← Prev</button>
+      <button class="lightbox-btn" onclick="lightboxNav(1)">Next →</button>
+    </div>
+  </div>
+ 
+ 
+  <!-- Send a Gift section -->
+  <div class="gift-section">
+    <h2>Send a Gift 🎀</h2>
+    <div class="gift-options">
+
+      <div class="gift-option">
+        <span class="gift-option-icon">
+             <img class="wish-card-img" src="./images/gift.jpg"/>
+        </span>
+        <p class="gift-option-title">Anything Thoughtful</p>
+        <p class="gift-option-detail">
+          <strong>Send me anything you <br> think I'll love🥰🤭 </strong>
+
+        </p>
+      </div>
+
+ 
+      <div class="gift-option">
+        <span class="gift-option-icon">
+            <img class="wish-card-img" src="./images/money.jpg" alt="Money"/>
+        </span>
+        <p class="gift-option-title">You Can Send Me Money Too</p>
+        <p class="gift-option-detail">
+          <strong>Oyinkansola Odunsi</strong>
+          UBA<br>
+          2225650772
+        </p>
+        <button class="copy-btn" onclick="copyAcct(this)">Copy Number Here.</button>
+      </div>
+ 
+      <div class="gift-option">
+        <span class="gift-option-icon">
+             <img class="wish-card-img" src="./images/text.jpg" alt="text"/>
+        </span>
+
+        <a href="tel:08112258793"><p class="gift-option-title">📞 Call Me!</p></a>
+        <p class="gift-option-detail">Reach out directly if you want to send me wishes or send a gift.</p>
+      </div>
+
+       <div class="gift-option">
+        <span class="gift-option-icon">
+             <img class="wish-card-img" src="./images/message.png" alt="anonymous_message"/>
+        </span>
+
+     <p class="gift-option-title">Reach Me Anonymously</p>
+        <p class="gift-option-detail">If you prefer to remain anonymous, leave me a message here.</p>
+         <a href="https://tally.so/r/QK4dRl" target="_blank">
+    Send a Message
+  </a>
+      </div>
+
+       
+    </div>
+  </div>
+ 
+</main>
+ 
+<footer>
+  Yes, I built this🤭🙈! Again, thank you for being here, it makes today feel for more special to me ❤️
+</footer>
+ 
+    
+     <script src="script.js"></script>
+</body>
+</html>
